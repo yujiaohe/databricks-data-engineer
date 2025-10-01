@@ -1,0 +1,88 @@
+{
+  "datasets": [
+    {
+      "name": "79ccfe61",
+      "displayName": "Untitled dataset",
+      "queryLines": [
+        "USE CATALOG `dea_course_ws`;\n",
+        "USE SCHEMA `default`;\n",
+        "\n",
+        "SELECT *\n",
+        "FROM gizmobox.gold.order_summary_monthly;"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "9b5cda11",
+      "displayName": "Untitled Page",
+      "layout": [
+        {
+          "widget": {
+            "name": "742806a5",
+            "queries": [
+              {
+                "name": "7672f26d20f04221927b3adc9f6c0fcd",
+                "query": {
+                  "datasetName": "79ccfe61",
+                  "fields": [
+                    {
+                      "name": "order_month",
+                      "expression": "`order_month`"
+                    },
+                    {
+                      "name": "column_c34dd96e20",
+                      "expression": "SUM(`total_orders`)"
+                    },
+                    {
+                      "name": "order_month",
+                      "expression": "`order_month`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 0,
+              "viz_spec": {
+                "display_name": "Monthly Order Summary",
+                "viz_type": "CHART",
+                "serialized_options": "{\"isAggregationOn\":true,\"series\":{\"error_y\":{\"type\":\"data\",\"visible\":true},\"stacking\":null},\"coefficient\":1,\"yAxis\":[{\"type\":\"-\"},{\"opposite\":true,\"type\":\"-\"}],\"columnConfigurationMap\":{\"series\":{\"column\":\"order_month\",\"id\":\"column_c34dd96e18\"},\"x\":{\"column\":\"order_month\",\"id\":\"column_c34dd96e16\"},\"y\":[{\"column\":\"total_orders\",\"id\":\"column_c34dd96e20\",\"transform\":\"SUM\"}]},\"alignYAxesAtZero\":true,\"direction\":{\"type\":\"counterclockwise\"},\"swappedAxes\":false,\"percentFormat\":\"0[.]00%\",\"textFormat\":\"\",\"legend\":{\"traceorder\":\"normal\"},\"globalSeriesType\":\"column\",\"version\":2,\"sizemode\":\"diameter\",\"seriesOptions\":{\"column_c34dd96e20\":{\"type\":\"column\",\"yAxis\":0}},\"error_y\":{\"type\":\"data\",\"visible\":true},\"sortX\":true,\"showDataLabels\":false,\"missingValuesAsZero\":true,\"useAggregationsUi\":true,\"numberFormat\":\"0,0.[00000]\",\"dateTimeFormat\":\"DD/MM/YYYY HH:mm\",\"sortY\":true,\"valuesOptions\":{},\"xAxis\":{\"labels\":{\"enabled\":true},\"type\":\"-\"}}",
+                "query_name": "7672f26d20f04221927b3adc9f6c0fcd"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 2,
+            "width": 3,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "77339f39",
+            "multilineTextboxSpec": {
+              "lines": [
+                "# GizmoBox Performance Dashboard - Order Summary"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 4,
+            "height": 2
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    }
+  }
+}
