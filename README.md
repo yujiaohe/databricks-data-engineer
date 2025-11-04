@@ -45,7 +45,6 @@ Each module follows Databricks’ recommended Lakehouse architecture pattern, us
 5. Optional: connect to Databricks SQL to create dashboards from the curated tables.
 
 
-### Required Azure resources
 
 
 
